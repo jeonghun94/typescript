@@ -18,7 +18,7 @@
 
     makeCoffee(shots: number): CoffeeCup {
       if (this.coffeeBeans < shots * CoffeeMaker.BEANS_GRAMM_PER_SHOT) {
-        throw new Error('Not enough coffee beans!');
+        throw new Error("Not enough coffee beans!");
       }
       this.coffeeBeans -= shots * CoffeeMaker.BEANS_GRAMM_PER_SHOT;
       return {
@@ -29,9 +29,10 @@
   }
 
   const maker = new CoffeeMaker(32);
-  console.log(maker);
+  console.log(maker.makeCoffee(1));
   const maker2 = new CoffeeMaker(14);
   console.log(maker2);
 
-  const maker3 = CoffeeMaker.makeMachine(3);
+  const maker3 = CoffeeMaker.makeMachine(33);
+  console.log(maker3);
 }

@@ -21,14 +21,14 @@
 
     fillCoffeeBeans(beans: number) {
       if (beans < 0) {
-        throw new Error('value for beans should be greater than 0');
+        throw new Error("value for beans should be greater than 0");
       }
       this.coffeeBeans += beans;
     }
 
     makeCoffee(shots: number): CoffeeCup {
       if (this.coffeeBeans < shots * CoffeeMaker.BEANS_GRAMM_PER_SHOT) {
-        throw new Error('Not enough coffee beans!');
+        throw new Error("Not enough coffee beans!");
       }
       this.coffeeBeans -= shots * CoffeeMaker.BEANS_GRAMM_PER_SHOT;
       return {
@@ -56,7 +56,12 @@
     }
     constructor(private firstName: string, public lastName: string) {}
   }
-  const user = new User('Steve', 'Jobs');
+  const user = new User("Steve", "Jobs");
   user.age = 6;
   console.log(user.fullName);
 }
+
+/**
+ * 외부에서 보여야 하는 데이터를 캡슐화하는 것을 의미
+ * 외부에서 보여야 하는 데이터를 제한하는 것을 의미
+ */
